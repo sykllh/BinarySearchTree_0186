@@ -48,9 +48,35 @@ public :
         search(element, parent, currentNode);
 
         //membuat conditional statement
-        Node* parent = nullptr;
-        Node* currentNode = nullptr;
-        search(element, parent, currentNode);
+        if (parent == nullptr) {
+            ROOT = newNode;
+            return;
+        }
+
+        if (element < parent->info)
+        {
+            parent->leftChild = newNode;
+        }
+        else if (element > parent->info)
+        {
+            parent->rightChild = newNode;
+        }
     }
+
+
+void search(string element, Node*& parent, Node*& currentNode) {
+    currentNode = ROOT;
+    parent = nullptr;
+    while ((currentNode != nullptr) && (currentNode->info != element))
+    {
+
+        parent = currentNode;
+        if (element < currentNode->info)
+            currentNode = currentNode->leftChild;
+        else
+            currentNode = currentNode->rightChild;
+        
+    }
+}
 
 }
