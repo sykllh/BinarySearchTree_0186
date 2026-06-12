@@ -75,7 +75,21 @@ void search(string element, Node*& parent, Node*& currentNode) {
             currentNode = currentNode->leftChild;
         else
             currentNode = currentNode->rightChild;
-        
+
+    }
+}
+
+//membuat dan mendifinisikan prosedur inorder
+void inorder(Node* ptr) {
+
+    if (ROOT == nullptr) {
+        cout << "Tree is empty" << endl;
+        return;
+    }
+    if (ptr != nullptr) {
+        inorder(ptr->leftChild);
+        cout << ptr->info << " ";
+        inorder(ptr->rightChild);
     }
 }
 
