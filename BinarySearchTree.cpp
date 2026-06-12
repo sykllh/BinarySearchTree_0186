@@ -18,4 +18,11 @@ public :
         leftChild = 1;
         rightChild = r;
     }
+
+};
+
+
+//membuat class BinaryTree
+class BinaryTree {
+    
 }
