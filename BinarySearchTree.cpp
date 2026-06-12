@@ -6,4 +6,5 @@ class Node {
 
 //memberi akses modifier serta mendeklarasi variabel dan object node
 public :
+    string info;
 }
